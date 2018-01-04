@@ -1,18 +1,23 @@
-package com.balaji.assignment.interfaces;
+package com.balaji.assignment.interfaces.currency;
 
-import java.util.Scanner;
-
-public class CurrencyClient {
-
-	public static void main(String[] args) {
-		Scanner scanner=new Scanner(System.in);
-		String country=scanner.nextLine();
-		Object o=new India();
-		if(o instanceof Currency) {
-			Currency currency=(Currency)o;
-			System.out.println(currency.getCurrency(country));
+public class CurrencyContainer {
+	public static Currency getCurrency(String country) {
+		country=country.toLowerCase();
+		if(country.equals("india")) {
+			India india=new India();
+			return india.getCurrency(country);
 		}
-		
+		else if(country.equals("usa")) {
+			USA usa=new USA();
+			return usa.getCurrency(country);
+		}
+		else if(country.equals("uk")) {
+			UK uk=new UK();
+			return uk.getCurrency(country);
+		}
+		else 
+			throw new IllegalArgumentException("The country is not valid.");
+			
 	}
 }
 class India implements Currency{

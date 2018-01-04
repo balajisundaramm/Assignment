@@ -2,10 +2,15 @@ package com.balaji.assignment.datatypes;
 
 import java.util.Scanner;
 
+/**
+ * @author spaneos
+ *
+ */
 public class Factorial {
 
+	// This method is used to run the program
 	public static void main(String[] args) {
-		try{
+		// The variable is used to iterate the while loop
 			int ch=1;
 			while(ch==1) {
 				System.out.println("Enter the number");
@@ -27,11 +32,6 @@ public class Factorial {
 				}
 			}
 		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	public static long findFactorial(int num) {
 		if(validateFactorial(num)) {
 			if(num==0)
