@@ -1,5 +1,6 @@
 package com.balaji.assignment.datatypes;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 /**
@@ -11,37 +12,70 @@ public class Factorial {
 	// This method is used to run the program
 	public static void main(String[] args) {
 		// The variable is used to iterate the while loop
-			int ch=1;
-			while(ch==1) {
-				System.out.println("Enter the number");
-				Scanner scanner=new Scanner(System.in);
-				if (scanner.hasNextInt()) {
-					int num=scanner.nextInt();
-					long result=findFactorial(num);
-					System.out.println((result!=-1)?"The factorial is "+result:"Invalid input input should be from 1 to 20");
-					System.out.println("Enter 1 to continue 0 to exit");
+		boolean flag=true;
+		// The variable is used to control the switch case
+		int ch=0;
+
+		while (flag) {
+			Scanner scanner=new Scanner(System.in);
+			Scanner scanner2=new Scanner(System.in);
+			System.out.println("Enter 1 to get Factorial");
+			System.out.println("Enter 2 to exit");
+			if(scanner2.hasNextInt()) {
+				ch=scanner2.nextInt();
+			}
+			else {
+				System.out.println("Enter only numbers");
+				flag=true;
+				continue;
+			}
+			switch (ch) {
+			case 1:
+				boolean choice=true;
+				while(choice) {
+					System.out.println("Enter the number");
 					scanner=new Scanner(System.in);
-					if(scanner.hasNextInt())
-						ch=scanner.nextInt();
-					else
-						throw new IllegalArgumentException("Enter only 1 0r 0");
+					if (scanner.hasNextInt()) {
+						int num=scanner.nextInt();
+						BigDecimal result=findFactorial(BigDecimal.valueOf(num));
+						if(result.intValue()!=-1) {
+							System.out.println("The factorial is "+result);
+							choice=false;
+						}
+						else {
+							System.out.println("Invalid input input should be from 1 to 5400");
+							choice=true;
+						}
+					}
+					else {
+						System.out.println("The given input is invalid please enter only numbers");
+						choice=true;
+					}
 				}
-				else {
-					System.out.println("The given input is invalid please enter only numbers");
-					ch=1;
-				}
+				flag=true;
+				break;
+			case 2:
+				System.out.println("Thank you!!!");
+				flag=false;
+				break;
+			default:
+				System.out.println("Enter only 1 or 2");
+				flag=true;
+				break;
 			}
 		}
-	public static long findFactorial(int num) {
-		if(validateFactorial(num)) {
-			if(num==0)
-				return 0;
-			return (num==1)?1:num*findFactorial(num-1);
+	}
+
+	public static BigDecimal findFactorial(BigDecimal num) {
+		if(validateFactorial(num.intValue())) {
+			if(num.intValue()==0)
+				return BigDecimal.valueOf(0);
+			return (num.intValue()==1)?BigDecimal.valueOf(1):num.multiply(findFactorial(num.subtract(BigDecimal.valueOf(1))));
 		}
-		return -1;
+		return BigDecimal.valueOf(-1);
 	}
 	public static boolean validateFactorial(int num) {
-		return (num>=0 && num<21)?true:false;
+		return (num>=0 && num<=5400)?true:false;
 	}
 
 }

@@ -57,6 +57,7 @@ public class EvenNumbers {
 			}
 		}
 	}
+	
 	public static void printEven(long num) {
 		if(num>=0) {
 			for (int i = 0; i <=num; i+=2) {
