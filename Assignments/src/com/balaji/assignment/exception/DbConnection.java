@@ -1,5 +1,7 @@
 package com.balaji.assignment.exception;
 
+import com.balaji.assignment.customexception.MultipleObjectCreationRestrictedException;
+
 public class DbConnection {
 	private static DbConnection connection=null;
 
@@ -23,11 +25,5 @@ public class DbConnection {
 		return "DbConnection";
 	}
 	
-}
-class MultipleObjectCreationRestrictedException extends Exception{
-
-	public MultipleObjectCreationRestrictedException(String message) {
-		super(message);
-	}
 	
 }

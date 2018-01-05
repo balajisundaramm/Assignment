@@ -1,5 +1,6 @@
 package com.balaji.assignment.exception;
 
+import com.balaji.assignment.customexception.MultipleObjectCreationRestrictedException;
 import com.balaji.assignment.utill.UserInputValidations;
 /**
  * 
