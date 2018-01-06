@@ -80,6 +80,25 @@ public class UserInputValidations {
 		}
 		return f;
 	}
+
+	public static char validateChar(){
+		char ch=0;
+		boolean flag=true;
+		while (flag) {
+			Scanner sc=new Scanner(System.in);
+			if(sc.hasNext()) {
+				ch=sc.next().charAt(0);
+				flag=false;
+			}
+			else {
+				System.out.println("Enter only numbers");
+				System.out.println("Type here");
+				flag=true;
+				continue;
+			}
+		}
+		return ch;
+	}
 	
 	/*public static String validatePhoneNo(){
 		String string="";
