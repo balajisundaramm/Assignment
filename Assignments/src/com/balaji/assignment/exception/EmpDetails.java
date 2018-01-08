@@ -1,10 +1,18 @@
 package com.balaji.assignment.exception;
 
 
+import com.balaji.assignment.customexception.LowSalException;
 import com.balaji.assignment.utill.UserInputValidations;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class EmpDetails {
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		int ch=0;
 		boolean flag=true;

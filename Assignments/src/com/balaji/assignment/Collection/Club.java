@@ -6,8 +6,16 @@ import java.util.List;
 import java.util.Set;
 
 import com.balaji.assignment.utill.UserInputValidations;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Club {
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		List footBall=new ArrayList<Player>();
 		List cricket=new ArrayList<Player>();
@@ -67,6 +75,12 @@ public class Club {
 
 		}
 	}
+	/**
+	 * 
+	 * @param football
+	 * @param cricket
+	 * @return
+	 */
 	public static List<Player> getMultiGamePlayers(List<Player> football, List<Player> cricket){
 		List list=new ArrayList<Player>();
 		Set  set1 = new HashSet<Player>(cricket);

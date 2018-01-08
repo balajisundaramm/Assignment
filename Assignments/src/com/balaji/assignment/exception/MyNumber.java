@@ -1,17 +1,22 @@
 package com.balaji.assignment.exception;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class MyNumber {
-	/*
-	 * 
-	 */
-	// the variable, firstNumber is used as a input variable
+	
 	private int firstNumber;
-	// the variable, secondNumber is used as a input variable
+
 	private int secondNumber;
-	// the variable, result is used as a return variable
+
 	private double result;
 
-	// This constructor is used to instantiate the input variables
+	/**
+	 * 
+	 * @param firstNumber
+	 * @param secondNumber
+	 */
 	public MyNumber(int firstNumber, int secondNumber) {
 		super();
 		this.firstNumber = firstNumber;
@@ -19,24 +24,51 @@ public class MyNumber {
 	}
 	
 	
-
+	/**
+	 * 
+	 * @return
+	 */
 	public double getResult() {
 		return result;
 	}
 
-
+	/**
+	 * 
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return
+	 */
 	public double add(int firstNumber, int secondNumber) {
 		this.result=firstNumber+secondNumber;
 		return result;
 	}
+	/**
+	 * 
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return
+	 */
 	public double subtract(int firstNumber, int secondNumber) {
 		this.result=firstNumber-secondNumber;
 		return result;
 	}
+	/**
+	 * 
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return
+	 */
 	public double multiply(int firstNumber, int secondNumber) {
 		this.result=firstNumber*secondNumber;
 		return result;
 	}
+	/**
+	 * 
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return
+	 * @throws ArithmeticException
+	 */
 	public double divide(int firstNumber, int secondNumber) throws ArithmeticException {
 		if(secondNumber!=0) {
 			this.result=firstNumber/secondNumber;

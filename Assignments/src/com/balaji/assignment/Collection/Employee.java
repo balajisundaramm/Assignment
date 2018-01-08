@@ -1,17 +1,63 @@
 package com.balaji.assignment.Collection;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Employee {
 	private String ename;
 	private int eno;
 	private String job;
-	
+	/**
+	 * @param ename
+	 * @param eno
+	 * @param job
+	 */
 	public Employee(String ename, int eno, String job) {
 		super();
 		this.ename = ename;
 		this.eno = eno;
 		this.job = job;
 	}
-	
+	/**
+	 * @return the ename
+	 */
+	public String getEname() {
+		return ename;
+	}
+	/**
+	 * @param ename the ename to set
+	 */
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	/**
+	 * @return the eno
+	 */
+	public int getEno() {
+		return eno;
+	}
+	/**
+	 * @param eno the eno to set
+	 */
+	public void setEno(int eno) {
+		this.eno = eno;
+	}
+	/**
+	 * @return the job
+	 */
+	public String getJob() {
+		return job;
+	}
+	/**
+	 * @param job the job to set
+	 */
+	public void setJob(String job) {
+		this.job = job;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -21,32 +67,9 @@ public class Employee {
 		result = prime * result + ((job == null) ? 0 : job.hashCode());
 		return result;
 	}
-
-
-	public String getEname() {
-		return ename;
-	}
-
-	public void setEname(String ename) {
-		this.ename = ename;
-	}
-
-	public int getEno() {
-		return eno;
-	}
-
-	public void setEno(int eno) {
-		this.eno = eno;
-	}
-
-	public String getJob() {
-		return job;
-	}
-
-	public void setJob(String job) {
-		this.job = job;
-	}
-
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -70,11 +93,13 @@ public class Employee {
 			return false;
 		return true;
 	}
-
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return "Employee [ename=" + ename + ", eno=" + eno + ", job=" + job + "]";
 	}
-
-
+	
+	
 }

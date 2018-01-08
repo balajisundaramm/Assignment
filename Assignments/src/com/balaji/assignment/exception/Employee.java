@@ -1,13 +1,22 @@
 package com.balaji.assignment.exception;
 
 import com.balaji.assignment.utill.UserInputValidations;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Employee {
 	private String empName;
 	private int empNumber;
 	private float experience;
 
-
+	/**
+	 * 
+	 * @param empName
+	 * @param empNumber
+	 * @param experience
+	 */
 	public Employee(String empName, int empNumber, float experience) {
 		super();
 		this.empName = empName;
@@ -23,8 +32,12 @@ public class Employee {
 	}
 
 
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
+		try {
 		int ch=0;
 		boolean flag=true;
 		while (flag) {
@@ -35,7 +48,7 @@ public class Employee {
 			case 1:
 				System.out.println("Enter employee's name");
 				String empName=UserInputValidations.validateString();
-				System.out.println("Enter employee's id");
+				System.out.println("Enter employee's id ex:123");
 				int empNumber=UserInputValidations.validateInteger();
 				System.out.println("Enter employee's experience");
 				float experience=UserInputValidations.validateFloat();
@@ -45,7 +58,7 @@ public class Employee {
 					System.out.println(employee);
 				}
 				else {
-					throw new IllegalArgumentException("The experience of the employee should be 2.6 to 3.5");
+					throw new IllegalArgumentException("To become an employee, Experience should be 2.6 to 3.5");
 				}
 				flag=true;
 				break;
@@ -59,6 +72,11 @@ public class Employee {
 				break;
 			}
 
+		}
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+			System.out.println("Thank you!!!");
 		}
 	}
 

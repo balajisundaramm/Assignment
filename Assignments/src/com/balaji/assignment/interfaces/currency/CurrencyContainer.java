@@ -1,17 +1,25 @@
 package com.balaji.assignment.interfaces.currency;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class CurrencyContainer {
-	public static Currency getCurrency(String country) {
-		country=country.toLowerCase();
-		if(country.equals("india")) {
+	/**
+	 * 
+	 * @param country
+	 * @return
+	 */
+	public static Currency getCurrency(String country) throws IllegalArgumentException {
+		if(country.equalsIgnoreCase("india")) {
 			India india=new India();
 			return india.getCurrency(country);
 		}
-		else if(country.equals("usa")) {
+		else if(country.equalsIgnoreCase("usa")) {
 			USA usa=new USA();
 			return usa.getCurrency(country);
 		}
-		else if(country.equals("uk")) {
+		else if(country.equalsIgnoreCase("uk")) {
 			UK uk=new UK();
 			return uk.getCurrency(country);
 		}
@@ -20,6 +28,11 @@ public class CurrencyContainer {
 			
 	}
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class India implements Currency{
 	@Override
 	public Currency getCurrency(String country) {
@@ -33,6 +46,11 @@ class India implements Currency{
 	}
 	
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class USA implements Currency{
 	@Override
 	public Currency getCurrency(String country) {
@@ -43,6 +61,11 @@ class USA implements Currency{
 		return "USA";
 	}
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class UK implements Currency{
 	@Override
 	public Currency getCurrency(String country) {

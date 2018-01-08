@@ -3,12 +3,20 @@ package com.balaji.assignment.Collection;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class EmployeeContainer {
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Set<Employee> employees= new HashSet<Employee>();
 		Scanner sc2=new Scanner(System.in);
+		Employee e1=null;
 
 		int ch=0;
 		boolean flag=true;
@@ -52,7 +60,7 @@ public class EmployeeContainer {
 				System.out.println("Enter the employee job");
 				String job=sc2.nextLine();
 				//Creating Employee object
-				Employee e1=new Employee(name, id, job);
+				e1=new Employee(name, id, job);
 				// adding the employee to the set
 				if(employees.add(e1)) {
 					System.out.println("Employee has been added successfully!!!");
@@ -64,64 +72,94 @@ public class EmployeeContainer {
 				break;
 			case 2:
 				System.out.println("Removing the employee");
-				id=0;
-				choice=true;
-				while(choice) {
-					System.out.println("Enter the employee id");
-					sc=new Scanner(System.in);
-					if(sc.hasNextInt()) {
-						id=sc.nextInt();
-						for (Employee employee : employees) {
-							if(id==employee.getEno()) {
-								employees.remove(employee);
-								System.out.println("The employee has been removed successfully!!!");
-								choice=false;
+				if(e1!=null) {
+					choice=true;
+					while(choice) {
+						if(employees.size()!=0) {
+							System.out.println("Enter the employee id");
+							sc=new Scanner(System.in);
+							if(sc.hasNextInt()) {
+								id=sc.nextInt();
+								for (Employee employee : employees) {
+									if(id==employee.getEno()) {
+										employees.remove(employee);
+										System.out.println("The employee has been removed successfully!!!");
+										choice=false;
+										break;
+									}
+									else {
+										System.out.println("Sorry, Employee is not found.");
+										choice=false;
+										break;
+									}
+								}
 							}
 							else {
-								System.out.println("Sorry, Employee is not found.");
-								choice=false;
+								System.out.println("Enter only numbers");
+								choice=true;
 							}
 						}
+						else {
+							System.out.println("there are no employees");
+							break;
+						}
 					}
-					else {
-						System.out.println("Enter only numbers");
-						choice=true;
-					}
+				}
+				else {
+					System.out.println("There are no employees...");
 				}
 				flag=true;
 				break;
 			case 3:
 				System.out.println("View the employee");
-				id=0;
-				choice=true;
-				while(choice) {
-					System.out.println("Enter the employee id");
-					sc=new Scanner(System.in);
-					if(sc.hasNextInt()) {
-						id=sc.nextInt();
-						choice=false;
-					}
-					else {
-						System.out.println("Enter only numbers");
-						choice=true;
-					}
-					for (Employee employee : employees) {
-						if(id==employee.getEno()) {
-							System.err.println("Employee details:");
-							System.out.println(employee);
-							choice=false;
+				if(e1!=null) {
+					id=0;
+					choice=true;
+					while(choice) {
+						if(employees.size()!=0) {
+							System.out.println("Enter the employee id");
+							sc=new Scanner(System.in);
+							if(sc.hasNextInt()) {
+								id=sc.nextInt();
+								choice=false;
+							}
+							else {
+								System.out.println("Enter only numbers");
+								choice=true;
+							}
+							for (Employee employee : employees) {
+								if(id==employee.getEno()) {
+									System.err.println("Employee details:");
+									System.out.println(employee);
+									choice=false;
+								}
+								else {
+									System.out.println("Sorry, Employee is not found.");
+									choice=false;
+								}
+							}
 						}
 						else {
-							System.out.println("Sorry, Employee is not found.");
-							choice=false;
+							System.out.println("There are no employees");
+							break;
 						}
 					}
+				}
+				else {
+					System.out.println("There are no employees");
+					break;
 				}
 				flag=true;
 				break;
 			case 4:
 				System.out.println("View all employees");
-				System.out.println(employees);
+				if(employees.size()!=0){
+					System.out.println(employees);
+				}
+				else {
+					System.out.println("There are no employeess");
+					break;
+				}
 				flag=true;
 				break;
 			case 5:

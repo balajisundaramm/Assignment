@@ -1,12 +1,25 @@
 package com.balaji.assignment.exception;
 
+import com.balaji.assignment.customexception.LowSalException;
+
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Emp {
 	private String name;
 	private int id;
 	private String designation;
 	private double basic;
 	private double hra;
-
+	/**
+	 * 
+	 * @param name
+	 * @param id
+	 * @param designation
+	 * @param basic
+	 */
 	public Emp(String name, int id, String designation, double basic) {
 		super();
 		this.name = name;
@@ -103,12 +116,3 @@ public class Emp {
 	
 
 }
-
-
-class LowSalException extends Exception{
-	public LowSalException(String message) {
-		super(message);
-	}
-}
-
-

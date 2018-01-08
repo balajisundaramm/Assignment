@@ -1,10 +1,17 @@
 package com.balaji.assignment.interfaces;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class UserList implements MyIterator{
 	 private String[] name;
 	 private int index;
 
-	
+	 /**
+	  * 
+	  * @param name
+	  */
 	public UserList(String[] name) {
 		super();
 		this.name = name;

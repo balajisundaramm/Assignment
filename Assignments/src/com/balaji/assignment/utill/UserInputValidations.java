@@ -3,9 +3,16 @@ package com.balaji.assignment.utill;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class UserInputValidations {
-
+	/**
+	 * 
+	 * @return
+	 */
 	public static int validateInteger() {
 		int num=0;
 		boolean flag=true;
@@ -24,7 +31,10 @@ public class UserInputValidations {
 		}
 		return num;
 	}
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public static double validateDouble() {
 		double num=0;
 		boolean flag=true;
@@ -43,14 +53,17 @@ public class UserInputValidations {
 		}
 		return num;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public static String validateString() {
 		String string="";
 		boolean flag=true;
 		while (flag) {
 			Scanner sc=new Scanner(System.in);
-			if(sc.hasNextLine()) {
-				string=sc.nextLine();
+			string=sc.nextLine();
+			if(string!=null && !(string.trim().equals(""))) {
 				flag=false;
 			}
 			else {
@@ -61,26 +74,10 @@ public class UserInputValidations {
 		}
 		return string;
 	}
-	
-	public static float validateFloat() {
-		float f=0.0f;
-		boolean flag=true;
-		while (flag) {
-			System.out.println("Enter the number");
-			Scanner sc=new Scanner(System.in);
-			if(sc.hasNextFloat()) {
-				f=sc.nextFloat();
-				flag=false;
-			}
-			else {
-				System.out.println("Enter only numbers");
-				flag=true;
-				continue;
-			}
-		}
-		return f;
-	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public static char validateChar(){
 		char ch=0;
 		boolean flag=true;
@@ -99,34 +96,27 @@ public class UserInputValidations {
 		}
 		return ch;
 	}
-	
-	/*public static String validatePhoneNo(){
-		String string="";
+	/**
+	 * 
+	 * @return
+	 */
+	public static float validateFloat() {
+		float f=0.0f;
 		boolean flag=true;
 		while (flag) {
+			System.out.println("Enter the number");
 			Scanner sc=new Scanner(System.in);
-			Scanner sc2=new Scanner(System.in);
-			if(sc.hasNextLine()) {
-				string=sc2.nextLine();
-				final Pattern VALIDATE_NAME =Pattern.compile("^[0-9]{10,12}$",Pattern.CASE_INSENSITIVE);
-		        Matcher matcher = VALIDATE_NAME.matcher(string);
-		        String msg="Name should contain only letters whose characters shuold be 2 to 30";
-		        if(matcher.find()) {
-		                return "SUCCESS";
-		            else
-		                msg="Catagory name is already exist. Enter the new name.";
-		        }
-		        return msg;
+			if(sc.hasNextFloat()) {
+				f=sc.nextFloat();
 				flag=false;
 			}
 			else {
-				System.out.println("Type something. It cannot be empty.");
+				System.out.println("Enter only numbers");
 				flag=true;
 				continue;
 			}
 		}
-		return string;
-	}*/
-	
+		return f;
+	}
 	
 }

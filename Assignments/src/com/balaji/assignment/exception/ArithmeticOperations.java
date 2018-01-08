@@ -1,9 +1,16 @@
 package com.balaji.assignment.exception;
 
 import com.balaji.assignment.utill.UserInputValidations;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class ArithmeticOperations {
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try {
 			int ch=0;
@@ -13,7 +20,7 @@ public class ArithmeticOperations {
 				System.out.println("Enter 2 to subtract two numbers");
 				System.out.println("Enter 3 to multiply two numbers");
 				System.out.println("Enter 4 to divide two numbers");
-				System.out.println("Enter 5 to exit two numbers");
+				System.out.println("Enter 5 to exit");
 				System.out.println("Enter your choice");
 				ch=UserInputValidations.validateInteger();
 				switch (ch) {
@@ -62,14 +69,17 @@ public class ArithmeticOperations {
 			}
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
+			System.out.println("Thank you!!!");
 		}
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public static int menu() {
 		System.out.println("Enter the number");
 		int a=UserInputValidations.validateInteger();
 		return a;
 	}
-
 
 }

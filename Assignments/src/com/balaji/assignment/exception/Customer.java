@@ -33,7 +33,7 @@ public class Customer {
 				System.out.println("Creating an account");
 				System.out.println("Enter the name of the customer");
 				String cusName=UserInputValidations.validateString();
-				System.out.println("Enter the account no");
+				System.out.println("Enter the account no ex:123");
 				int accNo=UserInputValidations.validateInteger();
 				System.out.println("Enter the account type");
 				System.out.println("Enter 1 to choose saving");

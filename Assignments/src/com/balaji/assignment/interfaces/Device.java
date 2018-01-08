@@ -1,8 +1,16 @@
 package com.balaji.assignment.interfaces;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Device {
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		int ch=0;
 		boolean flag=true;
@@ -45,6 +53,10 @@ public class Device {
 			}
 		}
 	}
+	/**
+	 * 
+	 * @param device
+	 */
 	public static void TestDevice(RemoteControl device) {
 		Scanner sc1=new Scanner(System.in);
 		boolean menuFlag=true;
@@ -127,11 +139,18 @@ public class Device {
 		}
 	}
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class DVD implements RemoteControl{
 	private boolean state;
 	private int volume;
 
-
+	/**
+	 * 
+	 */
 	public DVD() {
 		this.state=false;
 		this.volume=MIN_SOUND;
@@ -167,6 +186,7 @@ class DVD implements RemoteControl{
 		}
 
 	}
+	
 	@Override
 	public int volumeDown(int decrement) {
 		if (state) {
@@ -206,7 +226,11 @@ class DVD implements RemoteControl{
 	}
 
 }
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class TV implements RemoteControl{
 	private boolean state;
 	private int volume;

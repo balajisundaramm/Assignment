@@ -1,9 +1,20 @@
 package com.balaji.assignment.Collection;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Player {
 	private String name, email, city, state;
 	private int age;
-	
+	/**
+	 * 
+	 * @param name
+	 * @param email
+	 * @param city
+	 * @param state
+	 * @param age
+	 */
 	public Player(String name, String email, String city, String state, int age) {
 		super();
 		this.name = name;
@@ -12,48 +23,77 @@ public class Player {
 		this.state = state;
 		this.age = age;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
-
+	/**
+	 * 
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public String getEmail() {
 		return email;
 	}
-
+	/**
+	 * 
+	 * @param email
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public String getCity() {
 		return city;
 	}
-
+	/**
+	 * 
+	 * @param city
+	 */
 	public void setCity(String city) {
 		this.city = city;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public String getState() {
 		return state;
 	}
-
+	/**
+	 * 
+	 * @param state
+	 */
 	public void setState(String state) {
 		this.state = state;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public int getAge() {
 		return age;
 	}
-
+	/**
+	 * 
+	 * @param age
+	 */
 	public void setAge(int age) {
 		this.age = age;
 	}
 
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -107,5 +147,4 @@ public class Player {
 	}
 	
 	
-
 }

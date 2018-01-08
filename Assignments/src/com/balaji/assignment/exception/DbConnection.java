@@ -1,13 +1,22 @@
 package com.balaji.assignment.exception;
 
 import com.balaji.assignment.customexception.MultipleObjectCreationRestrictedException;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class DbConnection {
 	private static DbConnection connection=null;
 
 	private DbConnection() {
 		super();
 	}
+	/**
+	 * 
+	 * @return
+	 * @throws MultipleObjectCreationRestrictedException
+	 */
 	public static DbConnection getObject() throws MultipleObjectCreationRestrictedException {
 		if(connection==null) {
 			connection=new DbConnection();

@@ -1,9 +1,18 @@
 package com.balaji.assignment.interfaces;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class UserClient {
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
+		System.out.println("Checking my ideratior");
 		Scanner sc1=new Scanner(System.in);
 		Scanner sc2=new Scanner(System.in);
 		int length=0;
@@ -15,13 +24,12 @@ public class UserClient {
 			System.out.println("Enter only number");
 		}
 		String[] name=new String[length];
+		System.out.println("The elements of the array are names");
 		for (int i = 0; i <length; i++) {
 			System.out.println("Enter elemnt "+(i+1));
 			name[i]=sc2.nextLine();
 		}
-		for (String string : name) {
-			System.out.println(string);
-		}
+		System.out.println("The elements in the array are,");
 		UserList list=new UserList(name);
 		while (list.hasNext()) {
 			System.out.println(list.next());

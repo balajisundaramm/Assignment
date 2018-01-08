@@ -8,14 +8,13 @@ import java.util.Scanner;
  *
  */
 public class Factorial {
-
-	// This method is used to run the program
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		// The variable is used to iterate the while loop
 		boolean flag=true;
-		// The variable is used to control the switch case
 		int ch=0;
-
 		while (flag) {
 			Scanner scanner=new Scanner(System.in);
 			Scanner scanner2=new Scanner(System.in);
@@ -43,7 +42,7 @@ public class Factorial {
 							choice=false;
 						}
 						else {
-							System.out.println("Invalid input input should be from 1 to 5400");
+							System.out.println("Invalid input input should be from 0 to 5400");
 							choice=true;
 						}
 					}
@@ -65,7 +64,11 @@ public class Factorial {
 			}
 		}
 	}
-
+	/**
+	 * 
+	 * @param num
+	 * @return
+	 */
 	public static BigDecimal findFactorial(BigDecimal num) {
 		if(validateFactorial(num.intValue())) {
 			if(num.intValue()==0)
@@ -74,6 +77,11 @@ public class Factorial {
 		}
 		return BigDecimal.valueOf(-1);
 	}
+	/**
+	 * 
+	 * @param num
+	 * @return
+	 */
 	public static boolean validateFactorial(int num) {
 		return (num>=0 && num<=5400)?true:false;
 	}

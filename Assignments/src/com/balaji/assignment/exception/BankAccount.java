@@ -76,7 +76,11 @@ public class BankAccount {
 			throw new NegativeAmountException("Amount should not be negative. Enter the amount correctly");
 		}
 	}
-
+/**
+ * 
+ * @return
+ * @throws LowBalanceException
+ */
 	public float getBalance() throws LowBalanceException {
 		if(accType.equals(Constants.SAVING)) {
 			if((balance)>=1000) {

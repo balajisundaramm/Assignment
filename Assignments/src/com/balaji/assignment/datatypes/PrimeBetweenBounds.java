@@ -1,9 +1,16 @@
 package com.balaji.assignment.datatypes;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class PrimeBetweenBounds {
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// The variable is used to iterate the while loop
 		boolean flag=true;
@@ -67,6 +74,11 @@ public class PrimeBetweenBounds {
 			}
 		}
 	}
+	/**
+	 * 
+	 * @param start
+	 * @param end
+	 */
 	public static void printPrime(int start, int end) {
 		if (inputValidation(start, end)) {
 			if (start<=2 && end>=2) {
@@ -89,15 +101,22 @@ public class PrimeBetweenBounds {
 				}
 				if(flag)
 					System.out.println(i);
+				else
+					System.out.println("There is no prime in the limit");
 			}
 		}
 		else {
 			System.out.println("There is no prime in the limit");
 		}
 	}
-	
+	/**
+	 * 
+	 * @param start
+	 * @param end
+	 * @return
+	 */
 	public static boolean inputValidation(int start, int end) {
-		return (start>=1 && end>=start)?true:false;
+		return (end>=start && end>1)?true:false;
 	}
 
 }

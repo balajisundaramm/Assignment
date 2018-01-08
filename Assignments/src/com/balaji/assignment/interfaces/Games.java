@@ -1,15 +1,22 @@
 package com.balaji.assignment.interfaces;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Games {
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
+		System.out.println("Testing polymorphic code based on random numbers");
 		Game bike=new Bike();
 		Game bicycle=new BiCycle();
 		Game car=new Car();
 		Game[] games=new Game[10];
 		for (int i = 0; i <10; i++) {
 			int random=(int)(Math.random()*3)+1;
-			System.out.println(random);
 			if(random==1)
 				games[i]=car;
 			if(random==2)
@@ -18,10 +25,16 @@ public class Games {
 				games[i]=bicycle;
 		}
 		for (Game game : games) {
+			System.out.println("Vehicle : "+game);
 			testGame(game);
+			System.out.println("-----------------");
 		}
 		
 	}
+	/**
+	 * 
+	 * @param game
+	 */
 	public static void testGame(Game game) {
 		game.start();
 		game.play();
@@ -29,6 +42,11 @@ public class Games {
 	}
 
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class Bike implements Game{
 	@Override
 	public void start() {
@@ -42,7 +60,21 @@ class Bike implements Game{
 	public void stop() {
 		System.out.println("Bike stopped");
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Bike";
+	}
+	
+	
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class BiCycle implements Game{
 	@Override
 	public void start() {
@@ -59,7 +91,21 @@ class BiCycle implements Game{
 		System.out.println("Bicycle stopped");
 		
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "BiCycle";
+	}
+	
+	
 }
+/**
+ * 
+ * @author spaneos
+ *
+ */
 class Car implements Game{
 	@Override
 	public void start() {
@@ -76,4 +122,13 @@ class Car implements Game{
 		System.out.println("Car stopped");
 		
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Car";
+	}
+	
+	
 }
