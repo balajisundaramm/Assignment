@@ -2,19 +2,28 @@ package com.balaji.assignment.datatypes;
 
 import java.util.Scanner;
 /**
- * 
+ * This program is used to print the even numbers.
  * @author spaneos
  *
  */
 public class EvenNumbers {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 		public static void main(String[] args) {
+			/**
+			 * flag is used to control the while loop.
+			 * 
+			 */
 			boolean flag=true;
+			/**
+			 * ch is used to execute the chosen option.  
+			 */
 			int ch=0;
-			
+			/**
+			 * This loop displays the menu to the user. 
+			 */
 			while (flag) {
 				Scanner scanner=new Scanner(System.in);
 				Scanner scanner2=new Scanner(System.in);
@@ -59,7 +68,7 @@ public class EvenNumbers {
 		}
 		/**
 		 * 
-		 * @param num
+		 * @param num is the limit of the even number.
 		 */
 		public static void printEven(long num) {
 			if(num>=0) {

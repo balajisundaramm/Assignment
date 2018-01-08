@@ -12,7 +12,7 @@ import com.balaji.assignment.utill.UserInputValidations;
 public class ManipulateDigits5 {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		int ch=0;
@@ -33,7 +33,7 @@ public class ManipulateDigits5 {
 					if(scanner.hasNextInt())
 						digit=scanner.nextInt();
 					System.out.print("The occurance of the digit, "+digit+" in the number, "+num+" is :");
-					System.out.println(findOccurance(num, digit));
+					System.out.println(findOccurrence(num, digit));
 				}
 				else {
 					System.out.println("Enter a 5 digit number");
@@ -64,23 +64,23 @@ public class ManipulateDigits5 {
 		}
 	}
 	/**
-	 * 
-	 * @param num
-	 * @param digit
-	 * @return
+	 * This method is used to find the occurrence of a digit in given number 
+	 * @param num input value- five digit number
+	 * @param digit input value
+	 * @return int
 	 */
-	public static int findOccurance(int  num, int digit) {
+	public static int findOccurrence(int  num, int digit) {
 		int count=0;
-		for (int i :ManipulateDigits.seperateDigits(num) ) {
+		for (int i :ManipulateDigits.separateDigits(num) ) {
 			if(i==digit)
 				count++;
 		}
 		return count;
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 * This method is used to find the sum of the digits
+	 * @param num input value
+	 * @return the sum in single digit
 	 */
 	public static int sumSingleDigit(int num) {
 		int sum=0;

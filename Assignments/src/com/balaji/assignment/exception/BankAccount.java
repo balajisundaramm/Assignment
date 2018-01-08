@@ -17,10 +17,10 @@ public class BankAccount {
 	private float balance;
 /**
  * 
- * @param cusName
- * @param accNo
- * @param accType
- * @param balance
+ * @param cusName input value
+ * @param accNo Input value
+ * @param accType Input value-either be saving or current
+ * @param balance Initial Balance
  */
 	public BankAccount(String cusName, int accNo, String accType, float balance) {
 		this.cusName = cusName;
@@ -30,10 +30,10 @@ public class BankAccount {
 	}
 	/**
 	 * 
-	 * @param amt
-	 * @throws NegativeAmountException
+	 * @param amt input value to deposit
+	 * @throws NegativeAmountException To restrict invalid input
 	 */
-	public void deposite(float amt) throws NegativeAmountException {
+	public void deposit(float amt) throws NegativeAmountException {
 		if (amt>0) {
 			balance+=amt;
 		}
@@ -43,10 +43,10 @@ public class BankAccount {
 
 	}
 /**
- * 
- * @param amt
- * @throws InsufficientFundsExcxeption
- * @throws NegativeAmountException
+ * THis method is used to withdraw the given amount from the balance.
+ * @param amt Input value
+ * @throws InsufficientFundsExcxeption To maintain minimum balance
+ * @throws NegativeAmountException To restrict invalid input
  */
 	public void withdraw(float amt) throws InsufficientFundsExcxeption, NegativeAmountException {
 		if (amt>0) {
@@ -78,8 +78,8 @@ public class BankAccount {
 	}
 /**
  * 
- * @return
- * @throws LowBalanceException
+ * @return balance
+ * @throws LowBalanceException To maintain minimum balance.
  */
 	public float getBalance() throws LowBalanceException {
 		if(accType.equals(Constants.SAVING)) {

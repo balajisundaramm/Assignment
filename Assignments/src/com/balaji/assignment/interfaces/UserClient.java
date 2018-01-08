@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class UserClient {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		System.out.println("Checking my ideratior");

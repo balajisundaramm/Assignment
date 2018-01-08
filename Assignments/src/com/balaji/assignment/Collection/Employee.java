@@ -8,10 +8,10 @@ public class Employee {
 	private String ename;
 	private int eno;
 	private String job;
-	/**
-	 * @param ename
-	 * @param eno
-	 * @param job
+	/**Parameterized Constructor to Instantiate the Employee object
+	 * @param ename Input value - Name of the Employee
+	 * @param eno Input value - Employee id
+	 * @param job Input value-Designation
 	 */
 	public Employee(String ename, int eno, String job) {
 		super();

@@ -14,8 +14,8 @@ public class DbConnection {
 	}
 	/**
 	 * 
-	 * @return
-	 * @throws MultipleObjectCreationRestrictedException
+	 * @return DbConnection object
+	 * @throws MultipleObjectCreationRestrictedException Restricting to create multiple objects.
 	 */
 	public static DbConnection getObject() throws MultipleObjectCreationRestrictedException {
 		if(connection==null) {

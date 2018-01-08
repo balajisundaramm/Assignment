@@ -11,7 +11,7 @@ import com.balaji.assignment.utill.UserInputValidations;
 public class ManipulateDigits {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		int ch=0;
@@ -69,44 +69,44 @@ public class ManipulateDigits {
 		}
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 * This method is used to find the sum of digits of a number
+	 * @param num input to find the sum of it's digits.
+	 * @return the sum
 	 */
 	public static int sumDigits(int num) {
 		int sum=0;
-		for (int i :seperateDigits(num) ) {
+		for (int i :separateDigits(num) ) {
 			sum+=i;
 		}
 		return sum;
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 * This method is used to reverse a number
+	 * @param num input value
+	 * @return int
 	 */
 	public static int reverse(int num) {
 		int reverse=0;
-		for (int i :seperateDigits(num) ) {
+		for (int i :separateDigits(num) ) {
 			reverse=reverse*10+i;
 		}
 		return reverse;
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 * This method is used to find whether the number is Palindrome or not.
+	 * @param num input value
+	 * @return boolean
 	 */
 	public static boolean isPalindrome(int num) {
 		int rev=reverse(num);
 		return(num==rev)?true:false;
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 *  Sub method- used to separate the digits of the number.
+	 * @param num input value
+	 * @return an array of digits.
 	 */
-	public static int[] seperateDigits(int num) {
+	public static int[] separateDigits(int num) {
 		int[] digits=new int[String.valueOf(num).length()];
 		int index=0;
 		while (num>0) {
@@ -117,16 +117,16 @@ public class ManipulateDigits {
 		return digits;
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 *  This method id used to validate whether the number is a five digit number.
+	 * @param num input value
+	 * @return boolean
 	 */
 	public static boolean validateDigit(int num) {
 		return (String.valueOf(num).length()==5)?true:false;
 	}
 	/**
-	 * 
-	 * @return
+	 * This method is used to display the sub menu.
+	 * @return int
 	 */
 	public static int menu() {
 		int num=0;

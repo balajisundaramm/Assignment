@@ -7,8 +7,8 @@ package com.balaji.assignment.interfaces.currency;
 public class CurrencyContainer {
 	/**
 	 * 
-	 * @param country
-	 * @return
+	 * @param country input value
+	 * @return the object
 	 */
 	public static Currency getCurrency(String country) throws IllegalArgumentException {
 		if(country.equalsIgnoreCase("india")) {

@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Device {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		int ch=0;
@@ -54,8 +54,8 @@ public class Device {
 		}
 	}
 	/**
-	 * 
-	 * @param device
+	 * Polymorphic code 
+	 * @param device input value 
 	 */
 	public static void TestDevice(RemoteControl device) {
 		Scanner sc1=new Scanner(System.in);

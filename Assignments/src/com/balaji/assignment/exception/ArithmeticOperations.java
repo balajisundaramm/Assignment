@@ -9,7 +9,7 @@ import com.balaji.assignment.utill.UserInputValidations;
 public class ArithmeticOperations {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		try {
@@ -73,8 +73,8 @@ public class ArithmeticOperations {
 		}
 	}
 	/**
-	 * 
-	 * @return
+	 * This method displays the menu
+	 * @return int
 	 */
 	public static int menu() {
 		System.out.println("Enter the number");

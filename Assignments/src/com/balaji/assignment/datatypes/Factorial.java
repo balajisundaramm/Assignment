@@ -10,11 +10,21 @@ import java.util.Scanner;
 public class Factorial {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
+		/**
+		 * flag is used to control the while loop.
+		 * 
+		 */
 		boolean flag=true;
+		/**
+		 * ch is used to execute the chosen option.  
+		 */
 		int ch=0;
+		/**
+		 * This loop displays the menu to the user. 
+		 */
 		while (flag) {
 			Scanner scanner=new Scanner(System.in);
 			Scanner scanner2=new Scanner(System.in);
@@ -66,8 +76,8 @@ public class Factorial {
 	}
 	/**
 	 * 
-	 * @param num
-	 * @return
+	 * @param num input value to find factorial
+	 * @return the factorial value.
 	 */
 	public static BigDecimal findFactorial(BigDecimal num) {
 		if(validateFactorial(num.intValue())) {
@@ -78,9 +88,9 @@ public class Factorial {
 		return BigDecimal.valueOf(-1);
 	}
 	/**
-	 * 
-	 * @param num
-	 * @return
+	 * This method is used to validate the given number for factorial
+	 * @param num input value to validate.
+	 * @return boolean based on the validation
 	 */
 	public static boolean validateFactorial(int num) {
 		return (num>=0 && num<=5400)?true:false;

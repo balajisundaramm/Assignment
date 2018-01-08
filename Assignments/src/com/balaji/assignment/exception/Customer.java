@@ -15,7 +15,7 @@ import com.balaji.assignment.utill.UserInputValidations;
 public class Customer {
 
 	/**
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		int ch=0;
@@ -69,7 +69,7 @@ public class Customer {
 					System.out.println("Enter the amount");
 					float amt=UserInputValidations.validateFloat();
 					try {
-						account.deposite(amt);
+						account.deposit(amt);
 						System.out.println("Amount, "+amt+" deposited successfully!!");
 						System.out.println("The balnce is "+account.getBalance());
 					} 

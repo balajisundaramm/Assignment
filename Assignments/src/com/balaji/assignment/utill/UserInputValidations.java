@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
  */
 public class UserInputValidations {
 	/**
-	 * 
-	 * @return
+	 * Utillity method- checking whether the given input is an Integer or not. 
+	 * @return int 
 	 */
 	public static int validateInteger() {
 		int num=0;
@@ -32,8 +32,8 @@ public class UserInputValidations {
 		return num;
 	}
 	/**
-	 * 
-	 * @return
+	 * Utillity method- checking whether the given input is a double or not. 
+	 * @return double
 	 */
 	public static double validateDouble() {
 		double num=0;
@@ -54,8 +54,8 @@ public class UserInputValidations {
 		return num;
 	}
 	/**
-	 * 
-	 * @return
+	 * Utillity method- checking whether the given input is a String or not. 
+	 * @return String
 	 */
 	public static String validateString() {
 		String string="";
@@ -75,8 +75,8 @@ public class UserInputValidations {
 		return string;
 	}
 	/**
-	 * 
-	 * @return
+	 * Utillity method- checking whether the given input is a character or not. 
+	 * @return char
 	 */
 	public static char validateChar(){
 		char ch=0;
@@ -97,8 +97,8 @@ public class UserInputValidations {
 		return ch;
 	}
 	/**
-	 * 
-	 * @return
+	 * Utillity method- checking whether the given input is a float or not. 
+	 * @return float
 	 */
 	public static float validateFloat() {
 		float f=0.0f;

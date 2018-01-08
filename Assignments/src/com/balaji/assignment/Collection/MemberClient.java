@@ -12,6 +12,10 @@ import com.balaji.assignment.utill.UserInputValidations;
  *
  */
 public class MemberClient {
+	/**
+	 * 
+	 * @param args not used
+	 */
 	public static void main(String[] args) {
 		int ch=0;
 		boolean flag=true;

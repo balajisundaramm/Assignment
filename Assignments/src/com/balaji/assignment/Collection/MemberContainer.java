@@ -19,7 +19,9 @@ import com.balaji.assignment.utill.UserInputValidations;
  */
 public class MemberContainer {
 	List<Member> list=null;
-
+	/**
+	 * This method is used to add member to the list
+	 */
 	public void addMember(){
 		System.out.println("Enter the name");
 		String name= UserInputValidations.validateString();
@@ -37,7 +39,10 @@ public class MemberContainer {
 		System.out.println(member);
 		System.out.println("Member has been added successfully!!!");
 	}
-
+	/**
+	 * This method is used to delete the member from the list
+	 * @param member Input value-Member
+	 */
 	public void deleteMember(Member member){
 		if (member!=null){
 			list.remove(member);
@@ -48,7 +53,11 @@ public class MemberContainer {
 			System.out.println("Sorry, No matches found.");
 		}
 	}
-
+	/**
+	 * Search the member from the list
+	 * @param mid Input Value-Member ID
+	 * @return Member
+	 */
 	public Member serachById(String mid) {
 		Member member = null;
 		for (Member member1 : list) {
@@ -59,7 +68,12 @@ public class MemberContainer {
 		}
 		return member;
 	}
-
+	/**
+	 * 
+	 * @param id Member ID
+	 * @param name Member's name
+	 * @return Member
+	 */
 	public Member searchByName(String id,String name){
 		Member member=null;
 		for (Member member1:list) {
@@ -70,7 +84,11 @@ public class MemberContainer {
 		}
 		return member;
 	}
-
+	/**
+	 * 
+	 * @param order Order of searching 
+	 * @return Sorted Information
+	 */
 	public Set<Member> displaySortingOrder(String order){
 		if(order.equalsIgnoreCase("aesc")) {
 			Set<Member> sortedSet=new TreeSet<Member>();

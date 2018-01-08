@@ -14,7 +14,7 @@ import com.balaji.assignment.utill.UserInputValidations;
 public class Club {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		List footBall=new ArrayList<Player>();
@@ -77,9 +77,9 @@ public class Club {
 	}
 	/**
 	 * 
-	 * @param football
-	 * @param cricket
-	 * @return
+	 * @param football List of players playing foot ball
+	 * @param cricket List of players playing cricket
+	 * @return List of players playing both games
 	 */
 	public static List<Player> getMultiGamePlayers(List<Player> football, List<Player> cricket){
 		List list=new ArrayList<Player>();

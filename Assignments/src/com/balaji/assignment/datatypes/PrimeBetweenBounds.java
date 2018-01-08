@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class PrimeBetweenBounds {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used.
 	 */
 	public static void main(String[] args) {
 		// The variable is used to iterate the while loop
@@ -75,9 +75,9 @@ public class PrimeBetweenBounds {
 		}
 	}
 	/**
-	 * 
-	 * @param start
-	 * @param end
+	 * This method is used to find primes and print
+	 * @param start lower bound
+	 * @param end upper bound
 	 */
 	public static void printPrime(int start, int end) {
 		if (inputValidation(start, end)) {
@@ -111,9 +111,9 @@ public class PrimeBetweenBounds {
 	}
 	/**
 	 * 
-	 * @param start
-	 * @param end
-	 * @return
+	 * @param start lower bound
+	 * @param end upper bound
+	 * @return boolean
 	 */
 	public static boolean inputValidation(int start, int end) {
 		return (end>=start && end>1)?true:false;

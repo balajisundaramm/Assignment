@@ -16,7 +16,7 @@ public class QuestionContainer {
 	    private int wcount;
 	    /**
 	     * 
-	     * @return
+	     * @return the Question's list
 	     */
 	    public List<Question> listOfQuestions() {
 	        String q = "Which of these keyword must be used to inherit a class?";
@@ -58,7 +58,7 @@ public class QuestionContainer {
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return the result of the test
 	     */
 	    public int beginTest() {
 	        int ch = 0;

@@ -1,5 +1,9 @@
 package com.balaji.assignment.Collection;
-
+/**
+ * 
+ * @author spaneos
+ *
+ */
 public class Member implements Comparable<Member>{
 	private String memberId;
     private String name;
@@ -7,11 +11,11 @@ public class Member implements Comparable<Member>{
     private String country;
 
     /**
-     * 
-     * @param memberId
-     * @param name
-     * @param city
-     * @param country
+     * Parameterized Constructor
+     * @param memberId Member id
+     * @param name Name of the Member
+     * @param city City where member lives
+     * @param country Member's country
      */
     public Member(String memberId, String name, String city, String country) {
         this.memberId = memberId;
@@ -21,28 +25,28 @@ public class Member implements Comparable<Member>{
     }
     /**
      * 
-     * @return
+     * @return Member's id
      */
     public String getMemberId() {
         return memberId;
     }
     /**
      * 
-     * @return
+     * @return Member's name
      */
     public String getName() {
         return name;
     }
     /**
      * 
-     * @return
+     * @return Members's city
      */
     public String getCity() {
         return city;
     }
     /**
      * 
-     * @return
+     * @return Member's country
      */
     public String getCountry() {
         return country;

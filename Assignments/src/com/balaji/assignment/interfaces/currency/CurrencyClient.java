@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CurrencyClient {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		try {

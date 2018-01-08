@@ -7,7 +7,7 @@ package com.balaji.assignment.interfaces;
 public class Games {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		System.out.println("Testing polymorphic code based on random numbers");
@@ -32,8 +32,8 @@ public class Games {
 		
 	}
 	/**
-	 * 
-	 * @param game
+	 * Polymorphic code
+	 * @param game input value
 	 */
 	public static void testGame(Game game) {
 		game.start();

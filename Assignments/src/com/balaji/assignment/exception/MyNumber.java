@@ -13,9 +13,9 @@ public class MyNumber {
 	private double result;
 
 	/**
-	 * 
-	 * @param firstNumber
-	 * @param secondNumber
+	 * Parameterized Constructor
+	 * @param firstNumber Input value
+	 * @param secondNumber Input value
 	 */
 	public MyNumber(int firstNumber, int secondNumber) {
 		super();
@@ -26,7 +26,7 @@ public class MyNumber {
 	
 	/**
 	 * 
-	 * @return
+	 * @return the result of arithmetic operations
 	 */
 	public double getResult() {
 		return result;
@@ -34,9 +34,9 @@ public class MyNumber {
 
 	/**
 	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return
+	 * @param firstNumber Input value
+	 * @param secondNumber Input value
+	 * @return The sum 
 	 */
 	public double add(int firstNumber, int secondNumber) {
 		this.result=firstNumber+secondNumber;
@@ -44,9 +44,9 @@ public class MyNumber {
 	}
 	/**
 	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return
+	 * @param firstNumber Input value
+	 * @param secondNumber Input value
+	 * @return Subtracted value
 	 */
 	public double subtract(int firstNumber, int secondNumber) {
 		this.result=firstNumber-secondNumber;
@@ -54,9 +54,9 @@ public class MyNumber {
 	}
 	/**
 	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return
+	 * @param firstNumber Input value
+	 * @param secondNumber Input value
+	 * @return Multiplied value
 	 */
 	public double multiply(int firstNumber, int secondNumber) {
 		this.result=firstNumber*secondNumber;
@@ -64,10 +64,10 @@ public class MyNumber {
 	}
 	/**
 	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return
-	 * @throws ArithmeticException
+	 * @param firstNumber Input value
+	 * @param secondNumber Input value
+	 * @return the Quotient of two values
+	 * @throws ArithmeticException Restrict to get Infinity.
 	 */
 	public double divide(int firstNumber, int secondNumber) throws ArithmeticException {
 		if(secondNumber!=0) {

@@ -14,11 +14,11 @@ public class Emp {
 	private double basic;
 	private double hra;
 	/**
-	 * 
-	 * @param name
-	 * @param id
-	 * @param designation
-	 * @param basic
+	 * Parameterized Constructor to create employee object
+	 * @param name Input value-String-Employee name
+	 * @param id Input value-Integer-Employee id
+	 * @param designation Input value-String
+	 * @param basic Input value-double
 	 */
 	public Emp(String name, int id, String designation, double basic) {
 		super();
@@ -29,7 +29,7 @@ public class Emp {
 	}
 	
 	/**
-	 * @return the hra
+	 * @return the hra double
 	 */
 	public double getHra() {
 		return hra;
@@ -42,7 +42,7 @@ public class Emp {
 	}
 
 	/**
-	 * @return the name
+	 * @return the name Input value-String
 	 */
 	public String getName() {
 		return name;
@@ -78,7 +78,7 @@ public class Emp {
 	}
 	/**
 	 * @return the hra
-	 * @throws LowSalException 
+	 * @throws LowSalException To maintain minimum balance
 	 */
 	public double calculateHRA() throws LowSalException {
 		String designation=this.getDesignation();

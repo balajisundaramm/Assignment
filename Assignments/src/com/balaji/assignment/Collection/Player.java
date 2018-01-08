@@ -8,12 +8,12 @@ public class Player {
 	private String name, email, city, state;
 	private int age;
 	/**
-	 * 
-	 * @param name
-	 * @param email
-	 * @param city
-	 * @param state
-	 * @param age
+	 * Parameterized Constructor
+	 * @param name Player's name
+	 * @param email Player's email
+	 * @param city Player's city
+	 * @param state Player's state
+	 * @param age Player's age
 	 */
 	public Player(String name, String email, String city, String state, int age) {
 		super();
@@ -25,70 +25,70 @@ public class Player {
 	}
 	/**
 	 * 
-	 * @return
+	 * @return the name of the player
 	 */
 	public String getName() {
 		return name;
 	}
 	/**
 	 * 
-	 * @param name
+	 * @param name Player's name
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
 	 * 
-	 * @return
+	 * @return Player's email
 	 */
 	public String getEmail() {
 		return email;
 	}
 	/**
 	 * 
-	 * @param email
+	 * @param email Player's email
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 	/**
-	 * 
-	 * @return
+	 *  
+	 * @return Player's city
 	 */
 	public String getCity() {
 		return city;
 	}
 	/**
 	 * 
-	 * @param city
+	 * @param city Player's city
 	 */
 	public void setCity(String city) {
 		this.city = city;
 	}
 	/**
 	 * 
-	 * @return
+	 * @return Player's state
 	 */
 	public String getState() {
 		return state;
 	}
 	/**
 	 * 
-	 * @param state
+	 * @param state Player's state
 	 */
 	public void setState(String state) {
 		this.state = state;
 	}
 	/**
 	 * 
-	 * @return
+	 * @return Player's age
 	 */
 	public int getAge() {
 		return age;
 	}
 	/**
 	 * 
-	 * @param age
+	 * @param age Player's age
 	 */
 	public void setAge(int age) {
 		this.age = age;

@@ -12,13 +12,13 @@ public class Question {
 	    private String option4;
 	    private String answer;
 	    /**
-	     * 
-	     * @param question
-	     * @param option1
-	     * @param option2
-	     * @param option3
-	     * @param option4
-	     * @param answer
+	     * Parameterized Constructor
+	     * @param question Question
+	     * @param option1 Input value
+	     * @param option2 Input value
+	     * @param option3 Input value
+	     * @param option4 Input value
+	     * @param answer Input value
 	     */
 	    public Question(String question, String option1, String option2,
 	                    String option3, String option4, String answer) {
@@ -31,42 +31,42 @@ public class Question {
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return The Question
 	     */
 	    public String getQuestion() {
 	        return question;
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return The Option 1
 	     */
 	    public String getOption1() {
 	        return option1;
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return The Option 2
 	     */
 	    public String getOption2() {
 	        return option2;
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return The Option 3
 	     */
 	    public String getOption3() {
 	        return option3;
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return The Option 4
 	     */
 	    public String getOption4() {
 	        return option4;
 	    }
 	    /**
 	     * 
-	     * @return
+	     * @return The answer
 	     */
 	    public String getAnswer() {
 	        return answer;

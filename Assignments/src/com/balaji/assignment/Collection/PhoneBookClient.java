@@ -12,7 +12,7 @@ import com.balaji.assignment.utill.UserInputValidations;
 public class PhoneBookClient {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		int ch=0;

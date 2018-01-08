@@ -11,7 +11,7 @@ import java.util.Set;
 public class EmployeeContainer {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		Set<Employee> employees= new HashSet<Employee>();

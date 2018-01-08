@@ -7,7 +7,7 @@ package com.balaji.assignment.interfaces;
 public class Instruments {
 	/**
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 		System.out.println("Testing polymorphic code ");
@@ -24,8 +24,8 @@ public class Instruments {
 
 	}
 	/**
-	 * 
-	 * @param instrument
+	 * Polymorphic code
+	 * @param instrument input value
 	 */
 	public static void testInstrument(Instrument instrument) {
 		instrument.play();

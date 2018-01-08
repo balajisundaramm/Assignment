@@ -10,6 +10,10 @@ import com.balaji.assignment.utill.UserInputValidations;
  *
  */
 public class ExamClient {
+	/**
+	 * 
+	 * @param args not used
+	 */
 	public static void main(String[] args) {
         QuestionContainer container = null;
         int ch = 0;

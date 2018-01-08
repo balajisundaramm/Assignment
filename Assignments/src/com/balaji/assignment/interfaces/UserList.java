@@ -9,8 +9,8 @@ public class UserList implements MyIterator{
 	 private int index;
 
 	 /**
-	  * 
-	  * @param name
+	  * Constructor- used to instantiate the object
+	  * @param name input value
 	  */
 	public UserList(String[] name) {
 		super();

@@ -12,10 +12,10 @@ public class Employee {
 	private float experience;
 
 	/**
-	 * 
-	 * @param empName
-	 * @param empNumber
-	 * @param experience
+	 * Parameterized Constructor to Instantiate Employee object
+	 * @param empName Name of the employee
+	 * @param empNumber Employee number
+	 * @param experience Total experience in years
 	 */
 	public Employee(String empName, int empNumber, float experience) {
 		super();
@@ -33,9 +33,9 @@ public class Employee {
 
 
 	/**
-	 * 
-	 * @param args
-	 */
+	 *  
+	 * @param args not used
+	 */ 
 	public static void main(String[] args) {
 		try {
 		int ch=0;
