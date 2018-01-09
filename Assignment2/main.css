@@ -1,0 +1,15 @@
+body{
+    margin: 10px 20% 10px 20%;
+}
+.content-center{
+    text-align: center;
+    border-bottom: solid;
+    border-bottom-color: green;
+}
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+    color: green;
+}
