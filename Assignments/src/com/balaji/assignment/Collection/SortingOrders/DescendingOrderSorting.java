@@ -5,7 +5,7 @@ package com.balaji.assignment.Collection.SortingOrders;
 
 import java.util.Comparator;
 
-import com.balaji.assignment.Collection.Member;
+import com.balaji.assignment.Collection.member.Member;
 
 /**
  * @author spaneos
