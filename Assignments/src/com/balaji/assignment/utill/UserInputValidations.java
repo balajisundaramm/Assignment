@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  */
 public class UserInputValidations {
 	/**
-	 * Utillity method- checking whether the given input is an Integer or not. 
+	 * Utility method- checking whether the given input is an Integer or not. 
 	 * @return int 
 	 */
 	public static int validateInteger() {
@@ -32,7 +32,7 @@ public class UserInputValidations {
 		return num;
 	}
 	/**
-	 * Utillity method- checking whether the given input is a double or not. 
+	 * Utility method- checking whether the given input is a double or not. 
 	 * @return double
 	 */
 	public static double validateDouble() {
@@ -54,7 +54,7 @@ public class UserInputValidations {
 		return num;
 	}
 	/**
-	 * Utillity method- checking whether the given input is a String or not. 
+	 * Utility method- checking whether the given input is a String or not. 
 	 * @return String
 	 */
 	public static String validateString() {
@@ -75,7 +75,7 @@ public class UserInputValidations {
 		return string;
 	}
 	/**
-	 * Utillity method- checking whether the given input is a character or not. 
+	 * Utility method- checking whether the given input is a character or not. 
 	 * @return char
 	 */
 	public static char validateChar(){
@@ -97,7 +97,7 @@ public class UserInputValidations {
 		return ch;
 	}
 	/**
-	 * Utillity method- checking whether the given input is a float or not. 
+	 * Utility method- checking whether the given input is a float or not. 
 	 * @return float
 	 */
 	public static float validateFloat() {
